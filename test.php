@@ -71,8 +71,15 @@ const request = {
 		   this.setScreen();
 		   return;
 	   }
-	   if(this.ops.indexOf(v) > -1 && this.first_val) {
-		   this.operator = v;
+	   if(this.ops.indexOf(v) > -1) {
+		   if(v=='-' && !this.operator && !this.first_val){
+			   this.first_val=v;
+		   }else if(v=='-' && this.operator && !this.second_val){
+			   this.second_val=v;
+		   }else if(!this.operator && !this.second_val && this.first_val ){
+			   this.operator = v;
+		   }
+		   
 	   }else if(v=="."){
 		   if(this.operator && this.second_val && !this.second_val.includes('.')){
 			   this.second_val +=v;
