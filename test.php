@@ -140,7 +140,7 @@ const request = {
   },
   getResult(){
 	  if(this.first_val && this.second_val && this.operator  ){
-		var xmlhttp = new XMLHttpRequest();
+		/*var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
 		  if (this.readyState == 4 && this.status == 200) {
 			//document.getElementById("screen").innerHTML = this.responseText;
@@ -150,7 +150,15 @@ const request = {
 		  }
 		}
 		xmlhttp.open("GET", "calc.php?o="+this.getOp()+"&fv="+this.first_val+"&sv="+this.second_val, true);
-		xmlhttp.send();
+		xmlhttp.send();*/
+	    $.ajax({
+		  url: "calc.php?o="+this.getOp()+"&fv="+this.first_val+"&sv="+this.second_val,
+		  success: function(data){
+			window['req'].reset();
+			window['req'].setVal(data);
+			window['req'].setScreen(); 
+		  }
+	    });
 	  }
   }
 };
