@@ -7,33 +7,43 @@
 <link rel="stylesheet" href="styles.css">
  </head>
  <body>
- <?php echo '<p>gab calc</p>'; ?> 
+
  <div id="calculator">
 
-	<div class="top">
-		<span  id="clear" class="clear">C</span>
-		<div id="screen" class="screen">0</div>
-	</div>
-	
-	<div class="key">
+	<section class="top">
+		<div class="row">
+			<span  id="clear" class="clear col-md-2">C</span>
+			<div id="screen" class="screen col-md-10">0</div>
+		</div>
 
-		<span class="num">7</span>
-		<span class="num">8</span>
-		<span class="num">9</span>
-		<span class="operator">+</span>
-		<span class="num">4</span>
-		<span class="num">5</span>
-		<span class="num">6</span>
-		<span class="operator">-</span>
-		<span class="num">1</span>
-		<span class="num">2</span>
-		<span class="num">3</span>
-		<span class="operator">/</span>
-		<span class="num">0</span>
-		<span>.</span>
-		<span class="eval">=</span>
-		<span class="operator">x</span>
-	</div>
+	</section>
+	
+	<section class="key">
+		<div class="row">
+			<span class="num col-md-3">7</span>
+			<span class="num  col-md-3">8</span>
+			<span class="num  col-md-3">9</span>
+			<span class="operator  col-md-3">+</span>
+		</div>
+		<div class="row">
+			<span class="num  col-md-3">4</span>
+			<span class="num  col-md-3">5</span>
+			<span class="num  col-md-3">6</span>
+			<span class="operator  col-md-3">-</span>
+		</div>
+		<div class="row">
+			<span class="num  col-md-3">1</span>
+			<span class="num  col-md-3">2</span>
+			<span class="num  col-md-3">3</span>
+			<span class="operator  col-md-3">/</span>
+		</div>
+		<div class="row">
+			<span class="num  col-md-3">0</span>
+			<span  class="col-md-3">.</span>
+			<span class="eval col-md-3">=</span>
+			<span class="operator col-md-3">x</span>
+		</div>
+	</section>
 </div>
 <script>
 const request = {
