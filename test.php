@@ -8,7 +8,7 @@
  </head>
  <body>
 
- <div id="calculator">
+ <div class="container" id="calculator">
 
 	<section class="top">
 		<div class="row">
@@ -44,6 +44,7 @@
 			<span class="operator col-md-3">x</span>
 		</div>
 	</section>
+	 <span>made by gab.y</span>
 </div>
 <script>
 const request = {
