@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 			  echo $fv*$sv;
 		  }else if($o == 'd'){
 			  echo $fv/$sv;
+		  }else{
+		  	echo 'error';
 		  }
 	  }else{
 		  echo 0;
